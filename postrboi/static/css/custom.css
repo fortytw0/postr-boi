@@ -1,5 +1,37 @@
 .index-card {
     background-color: #0c0d16;
     border-color: #17b06b;
+    /* border-color: aqua; */
     border-style: solid;
+    border-radius: 0px;
+}
+
+.navbar-link {
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #17b06b;
+}
+
+.post-content {
+    height: 150px;
+}
+
+.post-author-tags{
+    height: 50px;
+}
+
+
+.post-stats {
+    height: 60px;
+}
+
+.post-bg-img {
+    height: 260px;
+    min-width: 500px;
+}
+
+
+.index-card:hover {
+    color:transparent;
+    background-color:pink;
 }

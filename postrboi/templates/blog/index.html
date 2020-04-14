@@ -1,38 +1,339 @@
 {% load staticfiles %}
-
-
+<!-- style="font-family: 'IBM Plex Mono', monospace;"
+style="font-family: 'Major Mono Display', monospace;"
+style="font-family: 'Press Start 2P', cursive;" -->
 
 <div class="container">
-    <div class="card index-card text-white mb-3 " style="min-width: 500px;">
-        <div class="row">
-            <div class="col-2 col-s-none">
-                <img class="img-fluid" src="{% static 'images/scifi.jpeg'%}" alt="Card image cap">
-            </div>
-            <div class="col-10 p-2">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+<div class="container">
+    <div class="card text-white mb-3 index-card" style="min-width: 500px;">
+
+        <!-- post content -->
+        <div class="row align-items-center post-content">
+            <div class="col-12">
+                <p class="card-text text-center text-mono" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-2">
-                <div class="badge badge-pill badge-success d-inline">tag1</div>
-                <div class="badge badge-pill badge-success d-inline">tag2</div>
-                <div class="badge badge-pill badge-success d-inline">tag1</div>
-                <div class="badge badge-pill badge-success d-inline">tag2</div>
-                <div class="badge badge-pill badge-success d-inline">tag1</div>
-                <div class="badge badge-pill badge-success d-inline">tag2</div>
-            </div>
-            <div class="col-10">
+
+        <!-- post author and tags -->
+        <div class="row post-author-tags">
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >SCI0FI</div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >ARTIFI</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center p-0 text-mono" > <a href="#">danasrinivas</a></div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >TIKTOK</div>
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >PROGRAM</div>
+        </div>    
+
+        <!-- post statistics -->
+        <div class="row post-stats">
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+            <div class="col-lg-10 col-md-10 col-sm-8 text-center">
                 <div class="row">
-                    <div class="col-4"><a class="text-success text-mono btn btn-danger btn-shadow px-3 my-2 ml-0" href="post.html">P0ST</a></div>
-                    <div class="col-4"><a class="text-success text-mono btn btn-danger btn-shadow px-3 my-2 ml-0" href="post.html">P0STdubnioefbnisfn</a></div>
-                    <div class="col-4"><a class="text-success text-mono btn btn-danger btn-shadow px-3 my-2 ml-0" href="post.html">P0STaoudcbaoucbo</a></div>
                     
-                        
+                    <!-- on large and xlarge screens -->
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:}</a></div>
+                    
+                    <!-- on medium screens -->
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
                 </div>
             </div>
-
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
         </div>
-        
+
+        <!-- featured image -->
+        <div class="row align-items-center post-bg-img" hidden>
+            <div class="col-12 text-center">
+                <img class="img-fluid" src="{% static 'images/scifi.jpeg'%}" alt="Card image cap">
+            </div>
+        </div>
+
     </div>
+
+    <div class="card text-white mb-3 index-card" style="min-width: 500px;">
+
+        <!-- post content -->
+        <div class="row align-items-center post-content">
+            <div class="col-12">
+                <p class="card-text text-center text-mono" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <!-- post author and tags -->
+        <div class="row post-author-tags">
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >SCI0FI</div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >ARTIFI</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center p-0 text-mono" > <a href="#">danasrinivas</a></div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >TIKTOK</div>
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >PROGRAM</div>
+        </div>    
+
+        <!-- post statistics -->
+        <div class="row post-stats">
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+            <div class="col-lg-10 col-md-10 col-sm-8 text-center">
+                <div class="row">
+                    
+                    <!-- on large and xlarge screens -->
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:}</a></div>
+                    
+                    <!-- on medium screens -->
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+        </div>
+
+        <!-- featured image -->
+        <div class="row align-items-center post-bg-img" hidden>
+            <div class="col-12 text-center">
+                <img class="img-fluid" src="{% static 'images/scifi.jpeg'%}" alt="Card image cap">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card text-white mb-3 index-card" style="min-width: 500px;">
+
+        <!-- post content -->
+        <div class="row align-items-center post-content">
+            <div class="col-12">
+                <p class="card-text text-center text-mono" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <!-- post author and tags -->
+        <div class="row post-author-tags">
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >SCI0FI</div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >ARTIFI</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center p-0 text-mono" > <a href="#">danasrinivas</a></div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >TIKTOK</div>
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >PROGRAM</div>
+        </div>    
+
+        <!-- post statistics -->
+        <div class="row post-stats">
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+            <div class="col-lg-10 col-md-10 col-sm-8 text-center">
+                <div class="row">
+                    
+                    <!-- on large and xlarge screens -->
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:}</a></div>
+                    
+                    <!-- on medium screens -->
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+        </div>
+
+        <!-- featured image -->
+        <div class="row align-items-center post-bg-img" hidden>
+            <div class="col-12 text-center">
+                <img class="img-fluid" src="{% static 'images/scifi.jpeg'%}" alt="Card image cap">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card text-white mb-3 index-card" style="min-width: 500px;">
+
+        <!-- post content -->
+        <div class="row align-items-center post-content">
+            <div class="col-12">
+                <p class="card-text text-center text-mono" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <!-- post author and tags -->
+        <div class="row post-author-tags">
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >SCI0FI</div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >ARTIFI</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center p-0 text-mono" > <a href="#">danasrinivas</a></div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >TIKTOK</div>
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >PROGRAM</div>
+        </div>    
+
+        <!-- post statistics -->
+        <div class="row post-stats">
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+            <div class="col-lg-10 col-md-10 col-sm-8 text-center">
+                <div class="row">
+                    
+                    <!-- on large and xlarge screens -->
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:}</a></div>
+                    
+                    <!-- on medium screens -->
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+        </div>
+
+        <!-- featured image -->
+        <div class="row align-items-center post-bg-img" hidden>
+            <div class="col-12 text-center">
+                <img class="img-fluid" src="{% static 'images/scifi.jpeg'%}" alt="Card image cap">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card text-white mb-3 index-card" style="min-width: 500px;">
+
+        <!-- post content -->
+        <div class="row align-items-center post-content">
+            <div class="col-12">
+                <p class="card-text text-center text-mono" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <!-- post author and tags -->
+        <div class="row post-author-tags">
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >SCI0FI</div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >ARTIFI</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center p-0 text-mono" > <a href="#">danasrinivas</a></div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >TIKTOK</div>
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >PROGRAM</div>
+        </div>    
+
+        <!-- post statistics -->
+        <div class="row post-stats">
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+            <div class="col-lg-10 col-md-10 col-sm-8 text-center">
+                <div class="row">
+                    
+                    <!-- on large and xlarge screens -->
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:}</a></div>
+                    
+                    <!-- on medium screens -->
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+        </div>
+
+        <!-- featured image -->
+        <div class="row align-items-center post-bg-img" hidden>
+            <div class="col-12 text-center">
+                <img class="img-fluid" src="{% static 'images/scifi.jpeg'%}" alt="Card image cap">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card text-white mb-3 index-card" style="min-width: 500px;">
+
+        <!-- post content -->
+        <div class="row align-items-center post-content">
+            <div class="col-12">
+                <p class="card-text text-center text-mono" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <!-- post author and tags -->
+        <div class="row post-author-tags">
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >SCI0FI</div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >ARTIFI</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center p-0 text-mono" > <a href="#">danasrinivas</a></div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >TIKTOK</div>
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >PROGRAM</div>
+        </div>    
+
+        <!-- post statistics -->
+        <div class="row post-stats">
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+            <div class="col-lg-10 col-md-10 col-sm-8 text-center">
+                <div class="row">
+                    
+                    <!-- on large and xlarge screens -->
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:}</a></div>
+                    
+                    <!-- on medium screens -->
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+        </div>
+
+        <!-- featured image -->
+        <div class="row align-items-center post-bg-img" hidden>
+            <div class="col-12 text-center">
+                <img class="img-fluid" src="{% static 'images/scifi.jpeg'%}" alt="Card image cap">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card text-white mb-3 index-card" style="min-width: 500px;">
+
+        <!-- post content -->
+        <div class="row align-items-center post-content">
+            <div class="col-12">
+                <p class="card-text text-center text-mono" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <!-- post author and tags -->
+        <div class="row post-author-tags">
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >SCI0FI</div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >ARTIFI</div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center p-0 text-mono" > <a href="#">danasrinivas</a></div>
+            <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >TIKTOK</div>
+            <div class="col-lg-2 d-none d-lg-block text-center text-mono" >PROGRAM</div>
+        </div>    
+
+        <!-- post statistics -->
+        <div class="row post-stats">
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+            <div class="col-lg-10 col-md-10 col-sm-8 text-center">
+                <div class="row">
+                    
+                    <!-- on large and xlarge screens -->
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:}</a></div>
+                    <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:}</a></div>
+                    
+                    <!-- on medium screens -->
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                    <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{}</a></div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+        </div>
+
+        <!-- featured image -->
+        <div class="row align-items-center post-bg-img" hidden>
+            <div class="col-12 text-center">
+                <img class="img-fluid" src="{% static 'images/scifi.jpeg'%}" alt="Card image cap">
+            </div>
+        </div>
+
+    </div>
+
 </div>
 
