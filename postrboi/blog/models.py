@@ -14,7 +14,7 @@ import string
 
 class Tag(models.Model) : 
 
-    tag_name = models.CharField(max_length=8) 
+    tag_name = models.CharField(max_length=8 , unique=True) 
     tag_creator = models.ForeignKey(User , on_delete=models.CASCADE)
     tag_slug = models.SlugField(max_length=50 , default="" , null=True)
 
@@ -28,6 +28,7 @@ class Tag(models.Model) :
     def save(self, *args, **kwargs):
 
         self.tag_slug = slugify(self.tag_name)
+        self.tag_name = self.tag_name.upper()
 
 
         if (self.pk is False) : 
@@ -43,7 +44,7 @@ class Post(models.Model) :
 
     poster = models.ForeignKey(User , on_delete = models.CASCADE)
     content = models.CharField(max_length=256)
-    hyperlink = models.SlugField(max_length=256 , null=True , blank=True)
+    hyperlink = models.URLField(max_length=256 , null=True , blank=True , unique=True)
     feature_image = models.ImageField(verbose_name="Background Image" , blank=True , null=True)
     
     tag_1 = models.ForeignKey(Tag , on_delete=models.CASCADE , related_name="high_prio_tag" , blank=True , null=True)
@@ -55,6 +56,19 @@ class Post(models.Model) :
     click_count = models.IntegerField(default=0)
     read_count = models.IntegerField(default=0)
 
+    def save(self, if_new_profile=False, *args , **kwargs):
+
+        self.hyperlink = self.hyperlink.replace("http://","")
+        self.hyperlink = self.hyperlink.replace("www.", "") 
+        self.hyperlink = self.hyperlink.replace("https://","")
+        
+        # if (self.pk is False) : 
+        #     new_user_profile = UserProfile.objects.create(user=self.user , user_slug=self.user_slug)
+        #     new_user_profile.posts_clicked.add(self.posts_clicked)
+
+
+        return super(Post, self).save(*args, **kwargs)
+
 
     def __str__(self):
         return self.content
@@ -62,7 +76,7 @@ class Post(models.Model) :
 
 class UserProfile(models.Model) : 
 
-    user = models.ForeignKey(User , on_delete=models.CASCADE)
+    user = models.OneToOneField(User , on_delete=models.CASCADE)
 
     user_slug = models.SlugField(max_length=50 , default = "")
 
