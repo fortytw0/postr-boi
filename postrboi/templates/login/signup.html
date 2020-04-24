@@ -1,9 +1,89 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
 
 
-  
 <div class="container">
+    <div class="row py-5">
 
-  <div class="row py-5">
+    <div class="col-2"></div>
+
+        <div class="col-8">
+
+            <form action="{% url 'login:register'%}" method="POST" class="needs-validation">
+                {% csrf_token %}
+                <div class="row">
+
+                    <!-- first name  -->
+                    <div class="col-md-6 mb-3">
+                        {% render_field signup_form.first_name class="form-control text-mono text-terminal input-field" placeholder=signup_form.first_name.name required=True %}
+                        {% for error in signup_form.first_name.errors %}
+                            <div class="invalid-feedback text-mono text-danger">
+                                {{ error }}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- last name  -->
+                    <div class="col-md-6 mb-3">
+                        {% render_field signup_form.last_name class="form-control text-mono text-terminal input-field" placeholder=signup_form.last_name.name required=True %}
+                        {% for error in signup_form.last_name.errors %}
+                            <div class="invalid-feedback text-mono text-danger">
+                                {{ error }}
+                            </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+
+                <!-- username -->
+                <div class="mb-3">
+                    {% render_field signup_form.username class="form-control text-mono text-terminal input-field" placeholder=signup_form.username.name required=True %}                    
+                    {% if signup_form.username.errors %}
+                        {% for error in signup_form.username.errors %}
+                        <div class="text-mono text-danger">
+                            {{ error|escape }}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <!-- email  -->
+                <div class="mb-3">
+                    {% render_field signup_form.email class="form-control text-mono text-terminal input-field" placeholder=signup_form.email.name required=True %}
+                    {% if signup_form.email.errors %}
+                        {% for error in signup_form.email.errors %}
+                            <div class="invalid-feedback text-mono text-danger">
+                                {{ error }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <!-- password  -->
+                <div class="mb-3">
+                    {% render_field signup_form.password class="form-control text-mono text-terminal input-field" placeholder=signup_form.password.name required=True %}
+                    {% if signup_form.password.errors %}
+                        {% for error in signup_form.password.errors %}
+                            <div class="text-mono text-danger">
+                                {{ error|escape }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <button class="btn text-mono btn-outline-success btn-lg btn-block" type="submit">Login</button>
+            </form>
+        </div>
+
+    <div class="col-2"></div>
+
+
+
+    </div>
+
+
+  <!-- <div class="row py-5">
     
     <div class="col-2"></div>
 
@@ -57,7 +137,7 @@
       </form>
     </div>
 
-    <div class="col-2"></div>
+    <div class="col-2"></div> -->
 
 
 

@@ -16,8 +16,23 @@
         <!-- navbar -->
         {% include "login/navbar.html" %}
 
-        <!-- signup form -->
-        {% include "login/signup.html" %}
-    
+
+        {% if signup %}
+            <!-- signup form -->
+            {% include "login/signup.html" with signup_form=user_form registered=True %}
+            
+
+        {% else %}
+
+        <!-- login form -->
+            {% include "login/login.html" with user_form='{{ login_form }}' login=False %}
+
+        {% endif %}
+
+
+        <!-- scripts -->
+        {% include "login/scripts.html" %}
+
+            
 </body>
 </html>
