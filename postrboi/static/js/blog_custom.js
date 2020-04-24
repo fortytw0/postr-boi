@@ -1,14 +1,6 @@
 var all_index_cards = Array.from(document.querySelectorAll(".index-card"));
 console.log(all_index_cards);
-// var all_bg_imgs = document.querySelectorAll(".index-card .post-bg-img");
-// console.log(all_bg_imgs);
 
-// global variables
-
-
-// event listeners
-
-// window.addEventListener('load' , hideBackgroundImagesOnLoad);
 
 all_index_cards.forEach(function(index_card){
     index_card.addEventListener('mousedown' , function(e){

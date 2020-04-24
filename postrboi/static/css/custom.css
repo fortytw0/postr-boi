@@ -35,3 +35,54 @@
     color:transparent;
     background-color:pink;
 }
+
+::placeholder{
+    
+    color: #33cc33;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.input-field {
+
+    border-style: solid;
+    border-color: #33cc33;
+    border-radius:0px;
+
+    background-color: #040404;
+    
+}
+
+.input-field::placeholder{
+    color: #b5f4c0
+}
+
+.input-field:focus{
+    background-color: black;
+    color : #7FFF00;
+}
+
+.text-terminal{
+    color:#7FFF00;
+}
+
+.terminal-background {
+    background-color: black;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: chartreuse;
+}
+
+.terminal-entry {
+    background-color: #040404;
+    background-color: black;
+    color : #7FFF00;
+    border-style: none;
+}
+
+.terminal-entry:focus{
+    background-color: black;
+    color : #7FFF00;
+    border-style: none;
+    outline: none;
+    caret-color: #b5f4c0;
+}

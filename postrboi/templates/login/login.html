@@ -1,0 +1,46 @@
+{% load staticfiles%}
+
+
+<div class='container my-5'>
+
+    <div class='row' style="height: 480px;">
+
+        <div class='col-2'></div>
+
+        <div class='col-8 terminal-background' id='terminal'>
+            <div class='text-terminal text-mono'>
+                Greetings from PostrBoi. Would you like to 'login' or 'signup'?
+            </div>
+
+            <div class='text-terminal text-mono' id="loginorsignup" >
+                <label for="loginorsignup">></label>
+                <input type="text" name="" class='terminal-entry'>
+            </div>
+        </div>
+
+        <div class='col-2'></div
+    </div>
+</div>
+<!-- hiddent snippets to be repeated -->
+<div hidden>  
+
+
+    <div class='text-terminal text-mono login-ack' id='login-ack'>
+        Understood. Parsing login page...
+    </div>
+
+    <div class='text-terminal text-mono login-username' id='login-username'>
+        <label for="username">>> username : </label>
+        <input type="text" name="username" id="username"  class='terminal-entry'>
+    </div>
+
+    <div class='text-terminal text-mono login-password' id='login-password'>
+        <label for="password">>> password : </label>
+        <input type="password" name="password" id="password"  class='terminal-entry'>
+    </div>
+
+    <div  class='text-terminal text-mono login-auth' id='login-auth'>
+        Submitting your credentials...
+    </div>
+
+</div> 
