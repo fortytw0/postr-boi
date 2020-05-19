@@ -5,6 +5,7 @@ from login.forms import UserForm
 from django.urls import reverse
 from django.shortcuts import redirect
 from django.http import HttpResponse
+import datetime
 
 # Create your views here.
 
@@ -12,12 +13,15 @@ def register(request) :
 
 
     registered = False 
+    
 
     if request.method == 'POST' : 
 
         print('posting !!!! .....')
 
         user_form = UserForm(request.POST)
+        print('user_form')
+        print(user_form)
         print('request.POST')
         print(request.POST)
 
@@ -49,6 +53,19 @@ def signin(request) :
 
     login_successful = False
     
+    print('setting session test cookie...')
+    request.session.set_test_cookie()
+
+    print("Has the test cookie worked?")
+    print(request.session.test_cookie_worked())
+
+    if request.session.test_cookie_worked() : 
+        request.session['cookies_accepted'] = True
+        request.session.delete_test_cookie()
+        
+
+
+    
     if request.method == 'POST' : 
 
         print('authenticating...')
@@ -63,7 +80,9 @@ def signin(request) :
             if user.is_active :
 
                 login(request , user)
-                return redirect(reverse('blog:index'))
+                now = datetime.datetime.now()
+                # request.session['last_signin'] = now.strftime("%d %m %Y , %H:%M:%S")
+                return redirect(reverse('blog:index_view'))
 
             else :
 

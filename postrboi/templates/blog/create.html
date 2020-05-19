@@ -17,13 +17,13 @@
 
    
         <!-- navbar -->
-        {% include "blog/navbar.html" with current_user=current_user %}
+        {% include "blog/navbar.html" %}
 
         <!-- page header -->
         {% include "blog/page-header.html" %}
 
-        <!-- index -->
-        {% include "blog/index.html" with all_posts=all_posts %}
+        <!-- create post/tag -->
+        {% include "blog/create_post.html" %}
 
         <!-- footer -->
         {% include "blog/footer.html" %}

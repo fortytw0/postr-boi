@@ -59,14 +59,17 @@
 .input-field:focus{
     background-color: black;
     color : #7FFF00;
+    box-sizing : border-box;
+
 }
 
 .text-terminal{
     color:#7FFF00;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .terminal-background {
-    background-color: black;
+    /* background-color: black; */
     border-style: solid;
     border-radius: 0px;
     border-color: chartreuse;
@@ -85,4 +88,33 @@
     border-style: none;
     outline: none;
     caret-color: #b5f4c0;
+}
+
+a:hover {
+
+    color: chartreuse;
+
+}
+
+textarea{
+    color:white;
+    min-width: 500px;
+    resize: none;
+    height:150px;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    border-color: #17b06b;
+    
+}
+
+textarea::placeholder{
+    color:#17b06b
+}
+
+textarea:focus{
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #17b06b;
+    outline: none;
 }

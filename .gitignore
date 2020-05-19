@@ -11,3 +11,10 @@
 
 # Folders
 *migrations/  
+
+
+# Pycharm related
+*idea*
+
+# revmoving virtual environment files
+*django-env/

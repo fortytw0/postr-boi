@@ -7,14 +7,9 @@ import string
 
 # Create your models here.
 
-
-
-
-
-
 class Tag(models.Model) : 
 
-    tag_name = models.CharField(max_length=8 , unique=True) 
+    tag_name = models.CharField(max_length=8 , unique=False) 
     tag_creator = models.ForeignKey(User , on_delete=models.CASCADE)
     tag_slug = models.SlugField(max_length=50 , default="" , null=True)
 
@@ -35,17 +30,14 @@ class Tag(models.Model) :
             Tag.objects.create(tag_name=self.tag_name , tag_slug=self.tag_slug , tag_creator=self.tag_creator)
 
         return super(Tag , self).save(*args, **kwargs)
-
-        
-
     
                 
 class Post(models.Model) : 
 
     poster = models.ForeignKey(User , on_delete = models.CASCADE)
-    content = models.CharField(max_length=256)
-    hyperlink = models.URLField(max_length=256 , null=True , blank=True , unique=True)
-    feature_image = models.ImageField(verbose_name="Background Image" , blank=True , null=True)
+    content = models.CharField(max_length=256, null=False , blank=False , unique=True)
+    article_hyperlink = models.URLField(max_length=256 , null=False , blank=False , unique=True)
+    image_hyperlink = models.URLField(max_length=256 , null=True , blank=True , unique=True)
     
     tag_1 = models.ForeignKey(Tag , on_delete=models.CASCADE , related_name="high_prio_tag" , blank=True , null=True)
     tag_2 = models.ForeignKey(Tag , on_delete=models.CASCADE , related_name="moderate_prio_tag", blank=True , null=True)
@@ -58,9 +50,9 @@ class Post(models.Model) :
 
     def save(self, if_new_profile=False, *args , **kwargs):
 
-        self.hyperlink = self.hyperlink.replace("http://","")
-        self.hyperlink = self.hyperlink.replace("www.", "") 
-        self.hyperlink = self.hyperlink.replace("https://","")
+        self.article_hyperlink = self.article_hyperlink.replace("http://","")
+        self.article_hyperlink = self.article_hyperlink.replace("www.", "") 
+        self.article_hyperlink = self.article_hyperlink.replace("https://","")
         
         # if (self.pk is False) : 
         #     new_user_profile = UserProfile.objects.create(user=self.user , user_slug=self.user_slug)
