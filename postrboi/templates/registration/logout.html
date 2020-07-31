@@ -1,0 +1,40 @@
+{% extends "registration/base.html"%}
+{% load static %}
+
+
+{% block content %}
+
+
+    <div class="container h-100">
+        <div class="row align-items-center text-center h-40">
+            <div class="col-12">
+                <p class="text-success text-mono mt-5">
+                    Goodbye, non-bot entity of <u><em>this</em></u> universe. <br>
+                    If you cease to remain a non-bot, I hope you are still accepting of life in 3 dimensions. <br>
+                    <br>
+                    If you wish to visit as a non-bot, you can <a href="{% url 'auth_login' %}" class="text-light"> by clicking here.</a> 
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row align-items-center text-center h-50">
+
+            <blockquote class="blockquote blockquote-reverse">
+                <h4 class="display-4">18次元 の パーティー メンタル です</h4>
+                <footer class="blockquote-footer">"18th dimension parties are mental." <br>
+                  <cite class="text-mono" title="ancient japenese wisdom">-Ancient Japanese Timetraveller</cite>
+                </footer>
+            </blockquote>
+
+        </div>
+    </div>
+
+    
+
+
+    
+
+
+
+{% endblock %}

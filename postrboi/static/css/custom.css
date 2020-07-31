@@ -1,3 +1,16 @@
+.registrationInput {
+    background:transparent;
+    border: none;
+    outline: none;
+    color:#17b06b;
+    border-bottom: 5px solid #17b06b;
+}
+
+
+html , body {
+    height:100%
+}
+
 .index-card {
     background-color: #0c0d16;
     border-color: #17b06b;
@@ -32,8 +45,8 @@
 
 
 .index-card:hover {
-    color:transparent;
-    background-color:pink;
+    color:black;
+    background-color:#ccffcc;
 }
 
 ::placeholder{
@@ -47,7 +60,8 @@
     border-style: solid;
     border-color: #33cc33;
     border-radius:0px;
-
+    min-width: 1px;
+    min-height: 1px;
     background-color: #040404;
     
 }
@@ -72,7 +86,7 @@
     /* background-color: black; */
     border-style: solid;
     border-radius: 0px;
-    border-color: chartreuse;
+    border-color: lightgrey;
 }
 
 .terminal-entry {
@@ -117,4 +131,181 @@ textarea:focus{
     border-radius: 0px;
     border-color: #17b06b;
     outline: none;
+}
+
+.userprofile-username {
+
+    text-transform: lowercase;
+    margin: 40px auto;
+    font-family: 'Monoton', cursive;
+    font-size: 80px;
+    font-weight: bold;
+    color: #FF0000;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 2px #FF0000, 
+        -2px 5px 0 #FF7F00, 
+        -4px 10px 0 #FFFF00,
+        -8px 15px 0 #00FF00,
+        -12px 20px 0 #0000FF,
+        -16px 25px 0 #4B0082,
+        -20px 30px 0 #9400D3;
+}
+
+.stat-description {
+
+    color : gainsboro ; 
+    opacity: 0.2;
+
+}
+
+.tag-text:hover {
+
+    border-color: silver;
+    border-style: solid;
+    border-width: 2px;
+    background: #2b2a33;
+    color : gainsboro ; 
+    text-decoration: none;
+
+}
+
+.animate-background {
+
+    text-transform: lowercase;
+    animation : color-change 7s infinite;
+    -webkit-animation : color-change 7s infinite ; 
+    -moz-animation: color-change 7s infinite;
+    -o-animation: color-change 7s infinite;
+}
+
+@-webkit-keyframes color-change {
+    0% {color: red; }
+    14% {color : orangered;}
+    28% {color : pink;}
+    42% {color: green;}
+    56% {color:blue;}
+    70% {color:indigo;}
+    84% {color: violet;}
+    100% {color: red; }
+}
+@-moz-keyframes color-change {
+    0% {color: red; }
+    14% {color : orangered;}
+    28% {color : pink;}
+    42% {color: green;}
+    56% {color:blue;}
+    70% {color:indigo;}
+    84% {color: violet;}
+    100% {color: red; }
+}
+@-o-keyframes color-change {
+    0% {color: red; }
+    14% {color : orangered;}
+    28% {color : pink;}
+    42% {color: green;}
+    56% {color:blue;}
+    70% {color:indigo;}
+    84% {color: violet;}
+    100% {color: red; }
+}
+@keyframes color-change {
+    0% {color: red; }
+    14% {color : orangered;}
+    28% {color : pink;}
+    42% {color: green;}
+    56% {color:blue;}
+    70% {color:indigo;}
+    84% {color: violet;}
+    100% {color: red; }
+}
+
+.tag-text {
+    font-family: 'Hack', cursive;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color : #ffffff;
+    opacity: 0.3;
+}
+
+.tag-text-index-view {
+    font-family: 'Hack', cursive;
+    color : #ffffff;
+    opacity: 0.3;
+
+} 
+
+.tag-text-index-view:hover {
+    border-color: silver;
+    border-style: solid;
+    border-width: 2px;
+    background: #2b2a33;
+    color : gainsboro ; 
+    text-decoration: none;
+    padding: 2px;
+}
+
+a .index-hyperlink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.index-card > .post-content .index-hyperlink {
+    color : white;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.index-card:hover > .post-content .index-hyperlink {
+    
+    animation : color-change 7s infinite;
+    -webkit-animation : color-change 7s infinite ; 
+    -moz-animation: color-change 7s infinite;
+    -o-animation: color-change 7s infinite;
+}
+
+.index-card:hover > .post-author-tags > .text-center > .tag-1{
+    color:royalblue;
+    opacity : 0.7;
+}
+
+.index-card:hover > .post-author-tags > .text-center > .tag-2{
+    color:limegreen;
+    opacity : 0.7;
+}
+.index-card:hover > .post-author-tags > .text-center > .tag-3{
+    color:orange;
+    opacity : 0.7;
+}
+.index-card:hover > .post-author-tags > .text-center > .tag-4{
+    color:red;
+    opacity : 0.7;
+}
+
+.index-card:hover > .post-author-tags > .text-center > .index-card-poster-name {
+
+    text-transform: lowercase;
+    margin: 4px auto;
+    font-family: 'Monoton', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF0000;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 1px #FF0000, 
+        -1px 2px 0 #FF7F00, 
+        -2px 4px 0 #FFFF00,
+        -3px 6px 0 #00FF00,
+        -4px 8px 0 #0000FF;
+
+}
+
+
+.index-card-username {
+
+
 }

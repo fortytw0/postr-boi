@@ -1,0 +1,40 @@
+{% extends "registration/base.html" %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block content %}
+
+<div class="container h-100">
+
+    <div class="row align-items-center text-center">
+        <div class="col-12 mx-auto">
+            <h1 class="display-3 text-light">l o g i n .</h1>
+        </div>
+    </div>
+
+    <div class="row align-items-center text-center h-50">
+
+        <div class="col-4 mx-auto">
+        <form method="post" action="{% url 'auth_login'%}?next={% url 'postrapp:index_view'%}">
+            {% csrf_token %}
+
+                
+
+            <label for="username" class="text-success text-mono">{{ form.username.label }}</label>
+            {% render_field form.username type="text" id="username" class="registrationInput text-mono col-12 mb-2" %}
+
+            <label for="password" class="text-success text-mono">{{ form.password.label }}</label>
+            {% render_field form.password type="password" id="password" class="registrationInput text-mono col-12 mb-2" %}
+
+            <input type="submit" class="btn btn-shadow text-mono btn-outline-success my-3" value="login" />
+        </form>
+
+        <p> <a href="{% url 'auth_password_reset' %}" class="text-mono text-light">Forgot password?</a></p>
+        <p><a href="{% url 'registration_register' %}" class="text-mono text-light">Create a new account.</a></p>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+

@@ -17,4 +17,7 @@
 *idea*
 
 # revmoving virtual environment files
-*django-env/
+*django-project/
+
+# Logs # 
+*.log

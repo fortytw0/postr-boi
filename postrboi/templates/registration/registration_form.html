@@ -1,0 +1,54 @@
+{% extends "registration/base.html"%}
+{% load static %}
+{% load widget_tweaks %}
+
+
+
+{% block content %}
+
+<div class="container h-100">
+
+    <div class="row align-items-center text-center">
+        <div class="col-12 mx-auto">
+            <h1 class="display-3 text-light">r e g i s t e r .</h1>
+        </div>
+    </div>
+
+    <div class="row align-items-center text-center h-50">
+
+
+        <div class="col-4 mx-auto">
+
+            <form method="POST"> {% csrf_token %}
+
+                <label for="username" class="text-success text-mono">{{ form.username.label }}</label>
+                {% render_field form.username type="text" id="username" class="registrationInput text-mono col-12 mb-2" %}
+                {% for error in form.username.errors %}
+                <p class="blockquote-footer text-warning">{{error}}</p>
+                {%endfor%}
+                
+                <label for="email" class="text-success text-mono">{{ form.email.label }}</label>
+                {% render_field form.email type="text" id="email" class="registrationInput text-mono col-12 mb-2" %}
+                {% for error in form.email.errors %}
+                <p class="blockquote-footer text-warning">{{error}}</p>
+                {%endfor%}
+                
+                <label for="password1" class="text-success text-mono">{{ form.password1.label }}</label>
+                {% render_field form.password1 type="password" id="password1" class="registrationInput text-mono col-12 mb-2" %}
+                
+                <label for="password2" class="text-success text-mono">{{ form.password2.label }}</label>
+                {% render_field form.password2 type="password" id="password2" class="registrationInput text-mono col-12 mb-2" %}
+                
+                <input class="btn btn-shadow text-mono btn-outline-success my-3" type="submit" value="登録する" placeholder="register">
+                
+
+            </form>
+            
+        </div>
+
+
+    </div>
+
+</div>
+{% endblock %}
+

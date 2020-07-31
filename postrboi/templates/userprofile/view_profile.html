@@ -1,0 +1,141 @@
+{% extends "userprofile/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container h-100">
+
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h4 class="userprofile-username ml-5">{{user.username}}</h4>
+            </div>
+            <div class="col-8">
+                <p class="text-mono text-light text-center">
+                    {{userprofile.description}}
+                </p>
+            </div>
+            <div class="col-8 text-center">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                        
+                            <!-- on large and xlarge screens -->
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:0</a></div>
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:0}</a></div>
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:0}</a></div>
+                            
+                            <!-- on medium screens -->
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+
+                            <p class="text-mono stat-description"> . 0 V 3 R A L L S T 4 T S . </p>  
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row justify-content-center">
+                        
+                            <!-- on large and xlarge screens -->
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:0</a></div>
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:0}</a></div>
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:0}</a></div>
+                            
+                            <!-- on medium screens -->
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+
+                            <p class="text-mono stat-description">. P 0 $ T S T A T S .</p>  
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row justify-content-center">
+                        
+                            <!-- on large and xlarge screens -->
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:0</a></div>
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:0}</a></div>
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:0}</a></div>
+                            
+                            <!-- on medium screens -->
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">0</a></div>
+                            
+                            <p class="text-mono stat-description">. T @ G S T A † s .</p>  
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-center align-items-center">
+            <p class="col-md-12 text-mono text-center" style="opacity: 0.2;">{{user.username}}'s tags</p>
+            <a href="#!" class="col-lg-2 mx-1 text-center  tag-text">TERRIFIC</a>
+            <a href="#!" class="col-lg-2 mx-1 text-center  tag-text">STARBND</a>
+            <a href="#!" class="col-lg-2 mx-1 text-center  tag-text">TERRIFIC</a>
+            <a href="#!" class="col-lg-2 mx-1 text-center  tag-text">STARBND</a>
+        </div>
+        <hr>
+        {% for post in all_posts %}
+        <div class="container">
+            <div class="card text-white mb-3 index-card" style="min-width: 500px;">
+
+                
+                <!-- post content -->
+                <div class="row align-items-center post-content">
+                    <div class="col-12">
+                        <p class="card-text text-center text-mono" >{{ post.content }}</p>
+                    </div>
+                </div>
+
+                <!-- post author and tags -->
+                <div class="row post-author-tags">
+                    <div class="col-lg-2 d-none d-lg-block text-center text-mono" >{{post.tag_1}}</div>
+                    <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >{{post.tag_2}}</div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 text-center p-0 text-mono" > <a href="#">{{post.poster}}</a></div>
+                    <div class="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block text-center text-mono" >{{post.tag_3}}</div>
+                    <div class="col-lg-2 d-none d-lg-block text-center text-mono" >{{post.tag_4}}</div>
+                </div>    
+
+                <!-- post statistics -->
+                <div class="row post-stats">
+                    <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+                    <div class="col-lg-10 col-md-10 col-sm-8 text-center">
+                        <div class="row">
+                            
+                            <!-- on large and xlarge screens -->
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{SEEN_COUNT:{{post.seen_count}}}</a></div>
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{CLICK_COUNT:{{post.click_count}}}</a></div>
+                            <div class="col-4 d-none d-lg-block"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{R3CC_COUNT:{{post.read_count}}}</a></div>
+                            
+                            <!-- on medium screens -->
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-success btn-shadow px-3 my-2 ml-0" href="post.html">{{post.seen_count}}</a></div>
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-primary btn-shadow px-3 my-2 ml-0" href="post.html">{{post.click_count}}</a></div>
+                            <div class="col-4 d-md-block d-lg-none"><a class="text-success text-mono btn btn-outline-danger btn-shadow px-3 my-2 ml-0" href="post.html">{{post.read_count}}</a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-2"><!-- empty space, for symmetry --></div>
+                </div>
+
+                <!-- featured image -->
+                <div class="row align-items-center post-bg-img" hidden>
+                    <div class="col-12 text-center">
+                        <img class="img-fluid" src="{{post.image_hyperlink}}" alt="Card image cap">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    {% endfor %}
+
+
+    </div>
+
+    
+
+    
+    
+{% endblock %}
